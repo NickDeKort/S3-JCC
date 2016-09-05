@@ -7,6 +7,7 @@ package jcc.opdracht1;
 
 import drawing.domain.Drawing;
 import drawing.domain.DrawingItem;
+import drawing.domain.IPaintable;
 import drawing.domain.Image;
 import drawing.domain.Oval;
 import drawing.domain.PaintedText;
@@ -83,5 +84,6 @@ public class JCCOpdracht1 {
         System.out.println("-------");
         
     }
+
     
 }
