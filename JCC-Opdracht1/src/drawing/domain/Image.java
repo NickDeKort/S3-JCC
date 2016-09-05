@@ -46,5 +46,12 @@ public class Image extends DrawingItem {
     public String toString() { 
         return "Image - Anchor: '"+ super.toString() + "', File: '" + this.file + "', Size: '" + this.size + "'";
     }
+
+    @Override
+    public void Paint(IPaintable paintable) {
+        paintable.paintImage(this);
+    }
+    
+    
     
 }

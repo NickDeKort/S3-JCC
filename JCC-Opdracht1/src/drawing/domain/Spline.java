@@ -52,5 +52,10 @@ public class Spline extends DrawingItem {
     public String toString() { 
         return "Spline - Anchor: '" + super.toString() + "', Points: '" + Arrays.toString(this.points) + "', Weight: '" + this.weight + "', Degree: '" + this.degree + "'";
     }
+
+    @Override
+    public void Paint(IPaintable paintable) {
+        paintable.paintLine(points[0], points[1], weight);
+    }
     
 }

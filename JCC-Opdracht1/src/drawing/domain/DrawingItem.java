@@ -23,7 +23,7 @@ import java.io.ObjectOutputStream;
  *
  * @author Nick de Kort
  */
-public class DrawingItem implements Comparable, Serializable {
+public abstract class DrawingItem implements Comparable, Serializable {
     
     private static final long serialVersionUID = 1L;
     
@@ -133,5 +133,7 @@ public class DrawingItem implements Comparable, Serializable {
             return -1;
         }
     }
+    
+    public abstract void Paint(IPaintable paintable);
     
 }

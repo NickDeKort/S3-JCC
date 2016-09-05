@@ -18,7 +18,7 @@ public interface IPaintable {
     // method signatures
     void setColor (Color color);
     void paintOval (Oval oval);
-    void paintLine (Point from, Point weight);
+    void paintLine (Point from, Point to, Integer weight);
     void paintText (PaintedText text);
     void paintImage (Image image);
     void clear();

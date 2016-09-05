@@ -47,7 +47,7 @@ public class DrawingTool extends Application{
                 this.painttable.paintText((PaintedText)drawingItem);
             } else if (drawingItem instanceof Spline) {
                 Point[] points = ((Spline) drawingItem).getPoints();
-                this.painttable.paintLine(points[0], points[1]);
+                this.painttable.paintLine(points[0].x, points[0].y, points[1].x, points[1].x);
             }
         }
     }

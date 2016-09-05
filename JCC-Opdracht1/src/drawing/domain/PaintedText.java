@@ -46,5 +46,10 @@ public class PaintedText extends DrawingItem {
     public String toString() { 
         return "PaintedText - Anchor: '"+ super.toString() + "', Content: '" + this.content + "', Font: '" + this.font + "'";
     }
+
+    @Override
+    public void Paint(IPaintable paintable) {
+        paintable.paintText(this);
+    }
     
 }

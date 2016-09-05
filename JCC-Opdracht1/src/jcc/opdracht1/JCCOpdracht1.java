@@ -29,14 +29,20 @@ public class JCCOpdracht1 {
      */
     public static void main(String[] args) {
         
-        DrawingTool dt = new DrawingTool();
+        new Thread() {
+            @Override
+            public void run() {
+                javafx.application.Application.launch(DrawingTool.class);
+            }
+        }.start();
         
+        DrawingTool drawingTool = new DrawingTool();
         
     }
     
     private void week1()
     {
-            Drawing drawing = new Drawing();
+        Drawing drawing = new Drawing();
         
         // Create Image drawingitem
         DrawingItem image = new Image(null, 2.2, new Point(2, 2), Color.BLACK);
