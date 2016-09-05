@@ -46,4 +46,10 @@ public class Oval extends DrawingItem {
         return "Oval - Anchor: '"+ super.toString() + "', Width: '" + this.width + "', Height: '" + this.height + "'";
     }
     
+
+    @Override
+    public void Paint(IPaintable paintable) {
+        paintable.paintOval(this);
+    }
+    
 }
