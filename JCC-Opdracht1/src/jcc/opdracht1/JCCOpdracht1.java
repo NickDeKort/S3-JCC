@@ -7,6 +7,7 @@ package jcc.opdracht1;
 
 import drawing.domain.Drawing;
 import drawing.domain.DrawingItem;
+import drawing.domain.DrawingTool;
 import drawing.domain.IPaintable;
 import drawing.domain.Image;
 import drawing.domain.Oval;
@@ -27,7 +28,15 @@ public class JCCOpdracht1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Drawing drawing = new Drawing();
+        
+        DrawingTool dt = new DrawingTool();
+        
+        
+    }
+    
+    private void week1()
+    {
+            Drawing drawing = new Drawing();
         
         // Create Image drawingitem
         DrawingItem image = new Image(null, 2.2, new Point(2, 2), Color.BLACK);
@@ -82,7 +91,6 @@ public class JCCOpdracht1 {
         Spline lastSpline = (Spline)drawing.getDrawingItems().get(3);
         System.out.println("New Current State: " + lastSpline.toString());
         System.out.println("-------");
-        
     }
 
     
