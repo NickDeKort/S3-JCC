@@ -5,8 +5,9 @@
  */
 package drawing.domain;
 
-import java.awt.Color;
+
 import java.awt.Point;
+import javafx.scene.paint.Color;
 
 /**
  *
