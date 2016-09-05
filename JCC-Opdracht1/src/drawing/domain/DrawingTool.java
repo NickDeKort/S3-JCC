@@ -12,6 +12,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Point;
 import javafx.scene.Group;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 
 
@@ -27,41 +28,12 @@ public class DrawingTool extends Application{
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        
-        try {
-
-            // Create Oval drawingitem
-            DrawingItem oval = new Oval(2.2, 2.2, new Point(1, 1), Color.BLACK);
-            oval.setColor(Color.BLACK);
-            drawing.addItem(oval);
-
-            // Create PaintedText drawingitem
-            Font newFont = new Font("Verdana", Font.BOLD, 12);
-            DrawingItem paintedText = new PaintedText(null, newFont, new Point(3, 3), Color.BLACK);
-            drawing.addItem(paintedText);
-
-            // Create Spline drawingitem
-            Point[] points = new Point[2];
-            points[0] = new Point(4, 4);
-            points[1] = new Point(5, 5);
-            DrawingItem spline = new Spline(points, 15, 90, new Point(5, 5), Color.BLACK);
-            drawing.addItem(spline);
-
-            // Change object and revert it to the previous state
-            //String fileName = Integer.toString(3);
-            //Spline changedSpline = (Spline)drawing.getDrawingItems().get(3);
-            //changedSpline.setPreviousState(changedSpline, fileName);
-            //changedSpline.setDegree(50);
-
-            this.draw();
-        } catch(Exception EX) {
-            System.out.println(EX);
-        }
-        
-        primaryStage.show();
+        draw();
         primaryStage.setTitle("Test");
         Group root = new Group();
         root.getChildren().add(canvas);
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
     }
     
     public void draw() {
